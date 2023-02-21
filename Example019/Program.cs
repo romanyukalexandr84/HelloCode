@@ -12,8 +12,11 @@
     }
     return html;
 }
-string url = "https://m.vk.com";
-string localPath = "vkcom.html";
+string url = "https://google.com";
+string localPath = "googlecom.html";
 string html = GetHtml(url, localPath);
-System.Console.WriteLine(html);
-System.Console.WriteLine(s.IndexOf("cjsdf"));
+// System.Console.WriteLine(html);
+int firstnumber = html.IndexOf("<title>");
+int secondnumber = html.IndexOf("</title>");
+string final = html.Substring (firstnumber+7, secondnumber-firstnumber-7);
+Console.WriteLine(final);
