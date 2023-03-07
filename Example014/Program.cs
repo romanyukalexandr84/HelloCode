@@ -5,8 +5,6 @@
     while (index < length)
     {
         collection[index] = new Random().Next(1, 10);
-
-        //index = index + 1;
         index++;
     }
 }
@@ -32,7 +30,7 @@ int count = 0;
 int index1 = 0;
 while (count < 10)
 {
-    int index1 = new Random().Next(0,10);
+    index1 = new Random().Next(0,10);
     Console.WriteLine(array[index1]);
     count++;
 }
