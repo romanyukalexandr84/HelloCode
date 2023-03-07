@@ -1,0 +1,14 @@
+﻿/*Решение для игры в пирамидки (ханойские башни) 
+with - с какого шпиля начинаем перемещать блины
+on - на какой шпиль перемещаем блины
+some - промежуточный шпиль
+count - количество блинов*/
+
+void Towers(string with = "1", string on = "3", string some = "2", int count = 4)
+{
+    if (count > 1) Towers(with, some, on, count - 1);
+    Console.WriteLine($"{with} >> {on}");
+    if (count > 1) Towers(some, on, with, count - 1);
+}
+
+Towers();
